@@ -69,6 +69,43 @@ cp ghostty-config ~/.config/ghostty/config
 | `Cmd + Shift + Enter` | Toggle split zoom |
 | `Cmd + Ctrl + =` | Equalize all splits |
 
+## Troubleshooting
+
+### "font-family-fallback: unknown field" on first launch
+
+The config option `font-family-fallback` does not exist in Ghostty. Fallback fonts are specified by repeating `font-family` multiple times:
+
+```ini
+# ❌ Wrong — will error
+font-family-fallback = Fira Code, Menlo, monospace
+
+# ✅ Correct
+font-family = JetBrains Mono
+font-family = Fira Code
+font-family = Menlo
+font-family = monospace
+```
+
+The config in this repo already uses the correct syntax, so the `install.sh` path is clean. If you wrote your own config, switch to repeated `font-family` lines.
+
+### "Library not loaded: Sparkle.framework" on launch
+
+The Ghostty binary links against Sparkle (auto-update framework) but it isn't bundled by default. The `create-app-bundle.sh` script installs Sparkle via Homebrew and copies it into the `.app`. If you see this error:
+
+```bash
+brew install sparkle
+cp -R /usr/local/Caskroom/sparkle/2.9.2/Sparkle.framework /Applications/Ghostty.app/Contents/Frameworks/
+codesign --force --deep --sign - /Applications/Ghostty.app
+```
+
+### Ghostty doesn't show in Spotlight / Launchpad
+
+Run the Launch Services re-registration:
+
+```bash
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -f /Applications/Ghostty.app
+```
+
 ## Credits
 
 - [Ghostty](https://github.com/ghostty-org/ghostty) by Mitchell Hashimoto
