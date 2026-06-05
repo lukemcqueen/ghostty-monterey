@@ -4,6 +4,11 @@ set -euo pipefail
 # ──────────────────────────────────────────────
 # install.sh — One-shot Ghostty Monterey installer
 # ──────────────────────────────────────────────
+# MIT License
+# Copyright (c) 2025 Luke McQueen
+# SPDX-License-Identifier: MIT
+# See LICENSE and NOTICE.md for third-party attributions.
+#
 # Clones, builds, bundles, and configures Ghostty
 # for macOS 12 Monterey.
 #

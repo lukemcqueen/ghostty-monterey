@@ -4,6 +4,10 @@ set -euo pipefail
 # ──────────────────────────────────────────────
 # build.sh — Clone & build Ghostty for macOS 12
 # ──────────────────────────────────────────────
+# MIT License
+# Copyright (c) 2025 Luke McQueen
+# SPDX-License-Identifier: MIT
+# See LICENSE and NOTICE.md for third-party attributions.
 
 SRC_DIR="${1:-$HOME/src/ghostty-macos-12}"
 ZIG_FLAGS="-Doptimize=ReleaseFast -Dapp-runtime=glfw -Drenderer=opengl"

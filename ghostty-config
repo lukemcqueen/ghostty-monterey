@@ -1,5 +1,9 @@
 # Ghostty configuration — for macOS 12 Monterey
 # See https://ghostty.org/docs/configuration for all options
+#
+# MIT License — Copyright (c) 2025 Luke McQueen
+# SPDX-License-Identifier: MIT
+# See LICENSE and NOTICE.md for third-party attributions.
 
 theme = catppuccin-mocha
 font-size = 14

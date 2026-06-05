@@ -106,7 +106,18 @@ Run the Launch Services re-registration:
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -f /Applications/Ghostty.app
 ```
 
-## Credits
+## Credits & Licensing
 
-- [Ghostty](https://github.com/ghostty-org/ghostty) by Mitchell Hashimoto
-- [@fightingdreamer](https://github.com/fightingdreamer/ghostty) for the macOS 12 port
+This project builds, packages, and configures third-party open source
+software. Full license texts are in [`NOTICE.md`](NOTICE.md).
+
+| Component | License | Author / Copyright |
+|---|---|---|
+| [Ghostty](https://github.com/ghostty-org/ghostty) | MIT | © 2024 Mitchell Hashimoto, Ghostty contributors |
+| [fightingdreamer/ghostty](https://github.com/fightingdreamer/ghostty) (macOS 12 fork) | MIT | © 2024 Mitchell Hashimoto |
+| [Sparkle](https://sparkle-project.org/) | MIT + BSD-2 | Andy Matuschak, Elgato Systems, Kornel Lesiński, Mayur Pawashe, et al. |
+| [Catppuccin](https://github.com/catppuccin/ghostty) theme | MIT | © 2021 Catppuccin |
+| [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono) | SIL OFL 1.1 | © 2020 JetBrains s.r.o. |
+
+The scripts, config, and documentation in this repository are released
+under the [MIT License](LICENSE).

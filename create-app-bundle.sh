@@ -6,6 +6,10 @@ set -euo pipefail
 # Wrap a compiled ghostty binary in a macOS .app
 # bundle with icon, Sparkle framework, and codesign.
 # ──────────────────────────────────────────────────
+# MIT License
+# Copyright (c) 2025 Luke McQueen
+# SPDX-License-Identifier: MIT
+# See LICENSE and NOTICE.md for third-party attributions.
 
 BINARY="${1:-$HOME/src/ghostty-macos-12/zig-out/bin/ghostty}"
 APP_DIR="/Applications/Ghostty.app"
